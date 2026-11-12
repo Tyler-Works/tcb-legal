@@ -1,0 +1,55 @@
+/* THE CLEAN BREAKERS ベータテスト 規約ページ共通のスタイル
+   外部フォント・外部ライブラリ・Cookie・アクセス解析は使わない */
+:root {
+  --bg: #ffffff;
+  --text: #1b1d21;
+  --muted: #5b6270;
+  --line: #d9dde3;
+  --accent: #0b6e8f;
+  --table-head: #f2f4f7;
+  --ph-bg: #fff3b0;
+  --ph-text: #5c4500;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171b;
+    --text: #e6e8eb;
+    --muted: #a3aab5;
+    --line: #343942;
+    --accent: #5cc3e3;
+    --table-head: #1f2329;
+    --ph-bg: #5c4a00;
+    --ph-text: #fff3b0;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+nav.lang {
+  display: flex; flex-wrap: wrap; gap: .5rem 1rem; justify-content: space-between;
+  border-bottom: 1px solid var(--line); padding-bottom: .5rem; margin-bottom: 1.5rem;
+  font-size: .9rem;
+}
+a { color: var(--accent); }
+h1 { font-size: 1.5rem; line-height: 1.4; margin: 0 0 .25rem; }
+h2 { font-size: 1.1rem; margin: 2rem 0 .5rem; padding-bottom: .2rem; border-bottom: 1px solid var(--line); }
+p.meta { color: var(--muted); margin: 0 0 1.5rem; font-size: .9rem; }
+ol, ul { padding-left: 1.5rem; }
+li { margin: .25rem 0; }
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; line-height: 1.6; }
+th, td { border: 1px solid var(--line); padding: .5rem; text-align: left; vertical-align: top; }
+th { background: var(--table-head); }
+code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: .85em; word-break: break-all; }
+.ph { background: var(--ph-bg); color: var(--ph-text); padding: 0 .2em; border-radius: 3px; }
+ul.doclist { list-style: none; padding: 0; }
+ul.doclist li { margin: .5rem 0; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); padding-top: .75rem; }
